@@ -5,8 +5,8 @@ module pc(
 	output reg [31:0] o_pc
 	);
 
-always @(posedge clk or negedge i_rst_n) begin 
-	if(~rst_n) begin
+always @(posedge i_clk or negedge i_rst_n) begin 
+	if(~i_rst_n) begin
 		o_pc <= 0;
 	end else begin
 		o_pc <= i_pc;
