@@ -15,8 +15,8 @@ reg [WIDTH-1:0] r_file [WIDTH-1:0];
 
 initial $readmemh("file.txt", r_file);
 
-assign o_rdata1 = (i_raddr1 != 0) ? r_file[i_raddr1] : 32'bz;
-assign o_rdata2 = (i_raddr2 != 0) ? r_file[i_raddr2] : 32'bz;
+assign o_rdata1 = (i_raddr1 != 0) ? r_file[i_raddr1] : 32'b0;
+assign o_rdata2 = (i_raddr2 != 0) ? r_file[i_raddr2] : 32'b0;
 
 
 always @(posedge i_clk) begin 
