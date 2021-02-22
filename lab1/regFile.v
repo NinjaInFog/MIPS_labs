@@ -11,15 +11,15 @@ module regFile(
 
 parameter WIDTH = 32;
 
-reg [WIDTH:0] r_file [WIDTH:0];
+reg [WIDTH-1:0] r_file [WIDTH-1:0];
 
 initial $readmemh("file.txt", r_file);
 
-assign o_rdata1 = r_file[i_raddr1];
-assign o_rdata2 = r_file[i_raddr2];
+assign o_rdata1 = (i_raddr1 != 0) ? r_file[i_raddr1] : 32'b0;
+assign o_rdata2 = (i_raddr2 != 0) ? r_file[i_raddr2] : 32'b0;
 
 
-@always @(posedge i_clk) begin 
+always @(posedge i_clk) begin 
 	if(i_we) begin
 		r_file[i_waddr] <= i_wdata;
 	end
