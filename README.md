@@ -4,7 +4,7 @@
 
 | List of Labs  |     Stage     |
 |:-------------:|:-------------:|
-|	  lab1		|	:soon:		|
+|	  lab1		|	:white_check_mark:|
 |	  lab2		|	:soon:		|
 |	  lab3		|	:soon:		|
 |	  lab4		|	:soon:		|
