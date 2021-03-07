@@ -8,5 +8,30 @@ input       [3:0]   i_control;
 output  reg [31:0]  o_result;
 output              o_zf;
   
+assign o_zf = !o_result;
+
+always @(*) begin 
+	case (i_control)
+		AND:  begin 
+				o_result <= i_op1 & i_op2;
+			  end
+		OR:   begin
+				o_result <= i_op1 | i_op2;
+			  end
+		ADD:  begin
+				o_result <= i_op1 + i_op2;
+			  end
+		SUB:  begin 
+				o_result <= i_op1 - i_op2;
+			  end
+		SOLT: begin
+				o_result <= (i_op1 < i_op2);
+			  end
+		NOR:  begin
+				o_result <= ~(i_op1 | i_op2);
+			  end	
+		default : o_result <= 32'b1;
+	endcase
+end
   
 endmodule
