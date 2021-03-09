@@ -1,5 +1,9 @@
-*
-.bak
-!*.v
-!*.md
-!lab*/*
+*.mti
+*.mpf
+*.do
+*.v.bak
+*.wlf
+*.dat
+*.txt
+**/transcript
+*/work/
