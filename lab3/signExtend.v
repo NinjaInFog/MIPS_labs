@@ -4,6 +4,6 @@ module signExtend(
 	output [31:0] o_data
 	);
 
-assign o_data = en ? {{16{i_data[15]}}, i_data} : {16'b0,i_data};
+assign o_data = en ? {{14{i_data[15]}}, i_data, 2'b0} : {16'b0,i_data};
 
 endmodule

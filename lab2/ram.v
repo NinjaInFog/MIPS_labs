@@ -1,6 +1,6 @@
 module ram(i_clk, i_addr, i_data, i_we, o_data);
 parameter DATA_WIDTH = 32;
-parameter ADDR_WIDTH = 5; 
+parameter ADDR_WIDTH = 32; 
 
 input                     i_clk, i_we;// if i_we then write else if !i_we then read
 input   [ADDR_WIDTH-1:0]  i_addr;
