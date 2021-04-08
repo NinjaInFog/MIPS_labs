@@ -29,6 +29,6 @@ initial begin
 
 end
 
-initial #280 $finish;
+initial #3000 $finish;
 
 endmodule
